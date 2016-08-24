@@ -13,14 +13,15 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'css/site.css',
-        'css/ownstyle.css',
-        'css/template/style.css',
-        'css/template/red.css',
-        'css/template/responsive.css',
-        'css/template/font-awesome.min.css',
         'css/template/slicknav.css',
+        'css/template/style.css',
+        'css/template/responsive.css',
+        'css/template/red.css',
+        'css/template/font-awesome.min.css',
+        'css/ownstyle.css',
     ];
     public $js = [
+        // Template JS
         'js/jquery-2.1.4.min.js',
         'js/jquery.migrate.js',
         'js/modernizrr.js',

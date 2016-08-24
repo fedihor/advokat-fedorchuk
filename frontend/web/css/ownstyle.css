@@ -12,8 +12,61 @@
     font-size: larger;
 }
 
-.logo-word1 {
+.logo-part1 {
     font-weight: bold;
     color: #ee3733;
-    
 }
+
+
+.lang {
+    margin: 0 3px;
+}
+
+.login-block {
+    margin: 0 70px 0 0;
+}
+
+.login {
+    background: none;
+    border: none;
+    margin: 0 3px;
+}
+
+.login:hover {
+    color: #ee3733;
+}
+
+.login, .lang  {
+    float:right;
+    font-size: 12px;
+    line-height: 32px;
+    top: -1px; 
+}
+
+.navbar-default .navbar-nav > li.active > a:after {
+    opacity: 1;
+    color: #ee3733;
+}
+
+.navbar-default .navbar-nav > li.active > a {
+    color: #ee3733;
+    border-bottom: 2px solid;
+    background-color: transparent;
+}
+.navbar-default .navbar-nav > .active > a:hover {
+    background-color: #faf7f9;
+    border-bottom-color: #ee3733;
+    color: #ee3733;
+}
+
+.slicknav_nav .active {
+    background-color: #faf7f9;
+}
+
+/*.navbar-collapse {
+    padding-left: 0px;
+}*/
+
+/*.navbar-collapse {
+    padding-right: 0px;
+}*/

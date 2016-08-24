@@ -133,7 +133,7 @@ class SiteController extends Controller
     
     public function actionContact_()
     {
-        $this->layout = 'main_';
+        //$this->layout = 'main_';
         
         return $this->render('contact_');
     }

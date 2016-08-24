@@ -60,7 +60,14 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        if(Yii::$app->user->can('admin'))
+        {
+            return $this->render('index');
+        }
+        else
+        {
+            throw new \yii\web\ForbiddenHttpException;
+        }
     }
 
     /**

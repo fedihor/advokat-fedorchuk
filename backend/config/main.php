@@ -15,7 +15,7 @@ return [
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-backend',
-//'baseUrl' => '',
+            //'baseUrl' => '',
         ],
         'user' => [
             'identityClass' => 'common\models\User',
@@ -45,6 +45,14 @@ return [
             'rules' => [
             ],
         ],
+        
+        
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager',
+            'defaultRoles' => ['guest'],
+        ],
+        
+        
         
     ],
     'params' => $params,

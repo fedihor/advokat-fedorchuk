@@ -585,7 +585,7 @@ ul.social-list li:last-child a i {
 }
 
 .navbar-default .navbar-nav {
-	margin-right: 10px!important;
+/* margin-right: 10px!important*/;
 	position: relative;
 	transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
@@ -641,9 +641,9 @@ ul.social-list li:last-child a i {
 	position: absolute;
 }
 
-.navbar-default .navbar-nav > li > a.active:after {
+/*.navbar-default .navbar-nav > li > a.active:after {
 	opacity: 1;
-}
+}*/
 
 .navbar-default .navbar-nav .dropdown {
     position: absolute;
@@ -5164,227 +5164,10 @@ ul.footer-nav li a:hover {
 }
 
 
-/******* Style Switcher *******/
-.switcher-box {
-	width: 212px;
-	position: fixed;
-	left: -212px;
-	top: 160px;
-	text-align: center;
-	z-index: 99999999;
-	background-color: #fff;
-	border-radius: 0 0 2px 0;
-	border-radius: 0 5px 5px 0;
-	-webkit-box-shadow: 0 0 6px rgba(0,0,0,0.2);
-	-moz-box-shadow: 0 0 5px rgba(0,0,0,0.2);
-	box-shadow: 0 0 5px rgba(0,0,0,0.2);
-	transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -webkit-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-}
-.switcher-box a{
-	cursor: pointer;
-}
-.switcher-box h4 {
-	display: block;
-	height: 40px;
-	line-height: 42px;
-	font-size: 14px;
-	font-weight: 700;
-	color: #fff;
-	background-color: #333;
-	margin-bottom: 10px;
-}
-.switcher-box span {
-	display: block;
-	padding: 5px 20px;
-	text-align: left;
-}
-.switcher-box .colors-list {
-	padding: 0 18px 0 18px;
-	margin-bottom: 8px;
-	line-height: 20px;
-}
-.switcher-box .colors-list li {
-	display: inline-block;
-	margin-right: 2px;
-}
-.switcher-box .colors-list li a {
-	display: block;
-	width: 24px;
-	height: 18px;
-	cursor: pointer;
-}
-.switcher-box .colors-list li a.blue {
-	background-color: #0a9fd8;
-}
-.switcher-box .colors-list li a.cyan {
-	background-color: #27bebe;
-}
-.switcher-box .colors-list li a.jade {
-	background-color: #0bb586;
-}
-.switcher-box .colors-list li a.red {
-	background-color: #ee3733;
-}
-.switcher-box .colors-list li a.peach {
-	background-color: #f49237;
-}
-.switcher-box .colors-list li a.sky-blue {
-	background-color: #38cbcb;
-}
-.switcher-box .colors-list li a.yellow {
-	background-color: #f8ba01;
-}
-.switcher-box .colors-list li a.green {
-	background-color: #94c523;
-}
-.switcher-box .colors-list li a.orange {
-	background-color: #f36510;
-}
-.switcher-box .colors-list li a.pink {
-	background-color: #f1505b;
-}
-.switcher-box .colors-list li a.purple {
-	background-color: #6a3da3;
-}
-.switcher-box .colors-list li a.beige {
-	background-color: #fdb655;
-}
-.switcher-box .layout-style, .switcher-box .topbar-style {
-	width: 172px;
-	padding: 6px 9px;
-	outline: none;
-	display: block;
-	background: #fff;
-	border-radius: 3px;
-	padding: 4px 6px;
-	color: #666;
-	cursor: pointer;
-	border-radius: 2px;
-	font-size: 12px;
-	margin: 0 0 12px 20px;
-	border: 1px solid #ddd;
-	-webkit-box-shadow: inset 1px 1px 3px 0px rgba(0, 0, 0, 0.06);
-	box-shadow: inset 1px 1px 3px 0px rgba(0, 0, 0, 0.06);
-}
-.switcher-box .bg-list {
-	padding: 0 18px 0 18px;
-	margin-bottom: 18px;
-}
-.switcher-box .bg-list li {
-	display: inline-block;
-	margin-right: 2px;
-}
-.switcher-box .bg-list li a {
-	display: block;
-	width: 20px;
-	height: 20px;
-}
-.switcher-box .bg-list li a.bg1 {
-	background: url(../images/patterns/1.png) repeat;
-}
-.switcher-box .bg-list li a.bg2 {
-	background: url(../images/patterns/2.png) repeat;
-}
-.switcher-box .bg-list li a.bg3 {
-	background: url(../images/patterns/3.png) repeat;
-}
-.switcher-box .bg-list li a.bg4 {
-	background: url(../images/patterns/4.png) repeat;
-}
-.switcher-box .bg-list li a.bg5 {
-	background: url(../images/patterns/5.png) repeat;
-}
-.switcher-box .bg-list li a.bg6 {
-	background: url(../images/patterns/6.png) repeat;
-}
-.switcher-box .bg-list li a.bg7 {
-	background: url(../images/patterns/7.png) repeat;
-}
-.switcher-box .bg-list li a.bg8 {
-	background: url(../images/patterns/8.png) repeat;
-}
-.switcher-box .bg-list li a.bg9 {
-	background: url(../images/patterns/9.png) repeat;
-}
-.switcher-box .bg-list li a.bg10 {
-	background: url(../images/patterns/10.png) repeat;
-}
-.switcher-box .bg-list li a.bg11 {
-	background: url(../images/patterns/11.png) repeat;
-}
-.switcher-box .bg-list li a.bg12 {
-	background: url(../images/patterns/12.png) repeat;
-}
-.switcher-box .bg-list li a.bg13 {
-	background: url(../images/patterns/13.png) repeat;
-}
-.switcher-box .bg-list li a.bg14 {
-	background: url(../images/patterns/14.png) repeat;
-}
-
-.switcher-box .open-switcher {
-	width: 40px;
-	height: 40px;
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 100%;
-	border-radius: 0 2px 2px 0;
-	background: #444 center no-repeat;
-	-webkit-box-shadow: 0 0 4px rgba(0,0,0,0.2);
-	-moz-box-shadow: 0 0 4px rgba(0,0,0,0.2);
-	box-shadow: 0 0 4px rgba(0,0,0,0.2);
-}
-
-.switcher-box .open-switcher:hover {
-	background: url(../images/icons/switcher.png) #444 center no-repeat;
-	-webkit-box-shadow: 0 0 4px rgba(0,0,0,0.2);
-	-moz-box-shadow: 0 0 4px rgba(0,0,0,0.2);
-	box-shadow: 0 0 4px rgba(0,0,0,0.2);
-	color: #fff;
-}
-
-.switcher-box .open-switcher i {
-	text-align: center;
-	padding-top: 7px;
-}
 
 .iframe {
 	border: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .services-2 {
   position:relative;
@@ -5510,14 +5293,6 @@ ul.footer-nav li a:hover {
   -ms-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
-
-
-
-
-
-
-
-
 
 /* Counter */
 

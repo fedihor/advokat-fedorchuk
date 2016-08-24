@@ -1,4 +1,18 @@
     
+
+
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1296.9969291959678!2d32.053671911117526!3d49.446833088296906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d14c839b874bcb%3A0xca2c8f3761247622!2z0LHRg9C70YzQstCw0YAg0KjQtdCy0YfQtdC90LrQsCwgMTk0LCDQp9C10YDQutCw0YHQuCwg0KfQtdGA0LrQsNGB0YzQutCwINC-0LHQu9Cw0YHRgtGM!5e0!3m2!1suk!2sua!4v1471814176939" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+
+
+
+
+
+
+
+
+
     <!-- Start Map -->
     <div id="map" data-position-latitude="23.858092" data-position-longitude="90.262181"></div>
     <script>
