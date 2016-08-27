@@ -3,6 +3,7 @@
 /* @var $this yii\web\View */
 
 $this->title = 'My Yii Application';
+Yii::$app->view->params['pageDetails'] = 'Контакти';
 ?>
 <div class="site-index">
 

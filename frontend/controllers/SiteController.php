@@ -115,6 +115,8 @@ class SiteController extends Controller
      */
     public function actionContact()
     {
+        //$this->layout = 'main-old';
+        
         $model = new ContactForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
@@ -133,7 +135,7 @@ class SiteController extends Controller
     
     public function actionContact_()
     {
-        //$this->layout = 'main_';
+        //$this->layout = 'main-old';
         
         return $this->render('contact_');
     }
@@ -143,8 +145,13 @@ class SiteController extends Controller
      *
      * @return mixed
      */
+    public function actionAbout_()
+    {
+        return $this->render('about_');
+    }
     public function actionAbout()
     {
+        $this->layout = 'main-old';
         return $this->render('about');
     }
 

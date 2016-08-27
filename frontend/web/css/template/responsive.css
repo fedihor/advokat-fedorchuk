@@ -112,6 +112,17 @@
             display: inline-block;
             float: left\0/;
     }
+    
+/*    ul.breadcrumb {
+        float: none;
+        text-align: center;
+    }
+
+    ul.breadcrumb li {
+        float: none;
+        display: inline-block;
+        float: left;
+    }*/
 
     .portfolio-4 .portfolio-item {
             width: 49.99%!important;
@@ -183,8 +194,16 @@
         display: none;
     }
         
-        
-	
+    .logo-part2 {
+        font-weight: bold;
+        color: #ee3733;
+    }
+    
+    .logo-part2, .logo-part3 {
+        font-size: 20px;
+    }
+    
+
 }
 
 @media (max-width: 768px) {
@@ -380,9 +399,13 @@
 
 @media (min-width : 992px) {
     
-    #main-slide .slider-content h2{
-		font-size: 68px;
-	}
+    #main-slide .slider-content h2 {
+        font-size: 68px;
+    }
+        
+    .logo {
+        font-size: larger;
+    }
 }
 
 

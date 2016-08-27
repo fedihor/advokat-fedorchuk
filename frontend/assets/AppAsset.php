@@ -17,7 +17,7 @@ class AppAsset extends AssetBundle
         'css/template/style.css',
         'css/template/responsive.css',
         'css/template/red.css',
-        'css/template/font-awesome.min.css',
+        //'css/template/font-awesome.min.css',
         'css/ownstyle.css',
     ];
     public $js = [

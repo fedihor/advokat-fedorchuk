@@ -3,18 +3,23 @@
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
+//use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
-
-use yii\helpers\Url;
 
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <?php 
-$web = Yii::getAlias('@web'); 
-$menu_items = ['Головна', 'Про адвоката', 'Консультація онлайн', 'Контакти'];
+$web = yii\helpers\Url::to('@web');
+//$menu_items = ['Головна', 'Про адвоката', 'Консультація онлайн', 'Контакти'];
+$menu_items = array(
+    array('Головна', '/site/index'),
+    array('Про адвоката', '/site/about'),
+    array('Ціни', '/site/price'),
+    array('Консультація онлайн', '/site/consult'),
+    array('Контакти', '/site/contact'),
+);
 ?>
 <!DOCTYPE html>
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
@@ -29,8 +34,8 @@ $menu_items = ['Головна', 'Про адвоката', 'Консульта�
 
         <script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
 
-<!--[if IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+        <!--[if IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+        <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
         <?= Html::csrfMetaTags() ?>
         <title><?= Html::encode($this->title) ?></title>
@@ -50,22 +55,28 @@ $menu_items = ['Головна', 'Про адвоката', 'Консульта�
                 <div class="top-bar">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-7">
                                 <!-- Start Contact Info -->
                                 <ul class="contact-details">
                                     <li>
-                                        <a href="#"><span class="head-icon glyphicon glyphicon-globe" aria-hidden="true"></span> бул. Шевченка 123, м. Черкаси</a>
+                                        <?= Html::a(Html::tag('span', '', 
+                                                $options = ['class' => 'head-icon glyphicon glyphicon-globe', 'aria-hidden' => 'true']).
+                                                ' бул. Шевченка 194, м. Черкаси', ['/site/contact']) ?>
                                     </li>
                                     <li>
-                                        <a href="#"><span class="head-icon glyphicon glyphicon-envelope" aria-hidden="true"></span> advokat-fedorchuk@e-mail.ua</a>
+                                        <?= Html::a(Html::tag('span', '', 
+                                                $options = ['class' => 'head-icon glyphicon glyphicon-envelope', 'aria-hidden' => 'true']).
+                                                ' advokat-fedorchuk@e-mail.ua', 'mailto:advokat-fedorchuk@e-mail.ua') ?>
                                     </li>
                                     <li>
-                                        <a href="#"><span class="head-iconw glyphicon glyphicon-earphone" aria-hidden="true"></span> +38 063 464 54 54</a>
+                                        <?= Html::a(Html::tag('span', '', 
+                                                $options = ['class' => 'head-iconw glyphicon glyphicon-earphone', 'aria-hidden' => 'true']).
+                                                '  +38 063 464 54 54', ['/site/contact']) ?>
                                     </li>
                                 </ul>
                                 <!-- End Contact Info -->
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-5">
                                 
                                 <?=
                                 Html::a('Рус', ['/site/login'], $options = [
@@ -82,100 +93,51 @@ $menu_items = ['Головна', 'Про адвоката', 'Консульта�
                                 ]);
                                 ?>
                                 
-                                    <div class="login-block">
-                                        <?php
-                                        if (Yii::$app->user->isGuest) {
-                                            echo Html::a('Реєстрація', ['/site/signup'], [
-                                                'class' => 'login',
-                                                'title' => 'Зареєструватись',
-                                                'target' => '_self',
-                                                'alt' => 'Реєстрація',
-                                            ]);
-                                            echo Html::a('Вхід', ['/site/login'], $options = [
-                                                'class' => 'login',
-                                                'title' => 'Увійти',
-                                                'target' => '_self',
-                                                'alt' => 'Вхід',
-                                            ]);
-                                        } else {
-                                            echo Html::beginForm(['/site/logout'], 'post')
-                                            . Html::submitButton(
-                                                    'Вийти (' . Yii::$app->user->identity->username . ')',
-                                                    ['class' => 'login']
-                                            )
-                                            . Html::endForm();
-                                        }
-                                        ?>
-                                    </div>
-
-
-
-
-
-                                <!-- Start Social Links -->
-                                <!--                <ul class="social-list">
-                                                    <li>
-                                                        <a class="linkdin itl-tooltip" data-placement="bottom" title="Google Plus" href="#"><i class="lang">Укр</i></a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="google itl-tooltip" data-placement="bottom" title="Linkedin" href="#"><i class="lang">Рус</i></a>
-                                                    </li>
-                                                </ul>-->
-
-                                <!-- End Social Links -->
-                                <!--                <ul class="setup-login">-->
-
-                                <!--                </ul>-->
-
-
+                                <div class="login-block">
+                                    <?php
+                                    if (Yii::$app->user->isGuest) {
+                                        echo Html::a('Реєстрація', ['/site/signup'], [
+                                            'class' => 'login',
+                                            'title' => 'Зареєструватись',
+                                            'target' => '_self',
+                                            'alt' => 'Реєстрація',
+                                        ]);
+                                        echo Html::a('Вхід', ['/site/login'], $options = [
+                                            'class' => 'login',
+                                            'title' => 'Увійти',
+                                            'target' => '_self',
+                                            'alt' => 'Вхід',
+                                        ]);
+                                    } else {
+                                        echo Html::beginForm(['/site/logout'], 'post')
+                                        . Html::submitButton(
+                                                'Вийти (' . Yii::$app->user->identity->username . ')',
+                                                ['class' => 'login']
+                                        )
+                                        . Html::endForm();
+                                    }
+                                    ?>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- End Top Bar -->
-                
-<!--                <a class="navbar-brand" href="/advokat-fedorchuk/frontend/web/index.php" 
-                   style="padding-top: 27px; padding-bottom: 27px;">My Company</a>
-
-
-<a class="navbar-brand" href="index.html">
-                                <span class="logo">
-                                    <span class="logo-part1">Адвокат</span>
-                                    <span class="logo-part2">Федорчук Оксана</span>
-                                </span>
-                            </a>
-
-
--->
-
-                   
-                   
-                   
                 <?php
-                
-                
-               
-                
-                
-                NavBar::begin(
-                        [
-                    'options' => [
-                        'class' => 'navbar navbar-default navbar-top',
-                    ],
-                ]
-                        );
+                NavBar::begin(['options' => ['class' => 'navbar navbar-default navbar-top']]);
                 
                 echo Html::a(Html::tag('span',
                     Html::tag('span', 'Адвокат', ['class' => 'logo-part1']) . ' ' .
-                    Html::tag('span', 'Федорчук Оксана', ['class' => 'logo-part2']), ['class' => 'logo']), 
+                    Html::tag('span', 'Федорчук', ['class' => 'logo-part2']) . ' ' .
+                    Html::tag('span', 'Оксана', ['class' => 'logo-part3']), ['class' => 'logo']), 
                     Yii::$app->homeUrl, $options = ['class' => 'navbar-brand']);
                 
-                
                 $menuItems = [
-                    ['label' => $menu_items[0], 'url' => ['/site/index']],
-                    ['label' => $menu_items[1], 'url' => ['/site/about']],
-                    ['label' => $menu_items[2], 'url' => ['/site/contact']],
-                    ['label' => $menu_items[3], 'url' => ['/site/contact_']],
+                    ['label' => $menu_items[0][0], 'url' => [$menu_items[0][1]]],
+                    ['label' => $menu_items[1][0], 'url' => [$menu_items[1][1]]],
+                    ['label' => $menu_items[2][0], 'url' => [$menu_items[2][1]]],
+                    ['label' => $menu_items[3][0], 'url' => [$menu_items[3][1]]],
+                    ['label' => $menu_items[4][0], 'url' => [$menu_items[4][1]]],
                 ];
                 ?>
                 <div class="navbar-collapse collapse">
@@ -187,13 +149,14 @@ $menu_items = ['Головна', 'Про адвоката', 'Консульта�
                     ?>
                 </div>
                 
-                <!--      Mobile Menu Start -->
+                <!--Mobile Menu Start -->
                 <?php
                 $menuItems_m = [
-                    ['label' => $menu_items[0], 'url' => ['/site/index']],
-                    ['label' => $menu_items[1], 'url' => ['/site/about']],
-                    ['label' => $menu_items[2], 'url' => ['/site/contact']],
-                    ['label' => $menu_items[3], 'url' => ['/site/contact_']],
+                    ['label' => $menu_items[0][0], 'url' => [$menu_items[0][1]]],
+                    ['label' => $menu_items[1][0], 'url' => [$menu_items[1][1]]],
+                    ['label' => $menu_items[2][0], 'url' => [$menu_items[2][1]]],
+                    ['label' => $menu_items[3][0], 'url' => [$menu_items[3][1]]],
+                    ['label' => $menu_items[4][0], 'url' => [$menu_items[4][1]]],
                 ];
                 echo Nav::widget([
                     'options' => ['class' => 'wpb-mobile-menu'],
@@ -201,119 +164,44 @@ $menu_items = ['Головна', 'Про адвоката', 'Консульта�
                 ]);
                 ?>
                 <!--         Mobile Menu End -->
+                
                 <?php NavBar::end(); ?>
-                
-
-                <!--      Mobile Menu Start -->
-                <!--        <ul class="wpb-mobile-menu">
-                          <li>
-                            <a href="index.html">Home</a>
-                          </li>
-                          <li>
-                            <a href="about.html">Pages</a>
-                          </li>
-                          <li>
-                            <a href="portfolio-3.html">Portfolio</a>
-                          </li>
-                          <li>
-                            <a href="blog.html">Blog</a>
-                            <ul class="dropdown">
-                              <li><a href="blog.html">Blog - right Sidebar</a>
-                              </li>
-                              <li><a href="blog-left-sidebar.html">Blog - Left Sidebar</a>
-                              </li>
-                              <li><a href="single-post.html">Blog Single Post</a>
-                              </li>
-                            </ul>
-                          </li>
-                          <li>
-                            <a class="active" href="contact.html">Контакти</a>
-                          </li>
-                        </ul>-->
-                <!--         Mobile Menu End -->
-
-               
-
-
-                <!-- Start Header ( Logo & Naviagtion ) -->
-                <!--      <div class="navbar navbar-default navbar-top">
-                        <div class="container">
-                          <div class="navbar-header">
-                             Stat Toggle Nav Link For Mobiles 
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                              <i class="fa fa-bars"></i>
-                            </button>
-                             End Toggle Nav Link For Mobiles 
-                            <a class="navbar-brand" href="index.html">
-                                <span class="logo">
-                                    <span class="logo-part1">Адвокат</span>
-                                    <span class="logo-part2">Федорчук Оксана</span>
-                                </span>
-                            </a>
-                          </div>
-                          <div class="navbar-collapse collapse">
-                             Start Navigation List 
-                            <ul class="nav navbar-nav navbar-right">
-                              <li>
-                                <a href="index.html">Головна</a>
-                              </li>
-                              <li>
-                                <a href="about.html">Про мене</a>
-                              </li>
-                              <li>
-                                <a href="blog.html">Онлайн консультація</a>
-                                <ul class="dropdown">
-                                  <li><a href="blog.html">Blog - right Sidebar</a></li>
-                                  <li><a href="blog-left-sidebar.html">Blog - Left Sidebar</a></li>
-                                  <li><a href="single-post.html">Blog Single Post</a></li>
-                                </ul>
-                              </li>
-                              <li><a class="active" href="contact.html">Контакти</a></li>
-                            </ul>
-                             End Navigation List 
-                          </div>
-                        </div>
-                
-                         Mobile Menu Start 
-                        <ul class="wpb-mobile-menu">
-                          <li>
-                            <a href="index.html">Home</a>
-                          </li>
-                          <li>
-                            <a href="about.html">Pages</a>
-                          </li>
-                          <li>
-                            <a href="portfolio-3.html">Portfolio</a>
-                          </li>
-                          <li>
-                            <a href="blog.html">Blog</a>
-                            <ul class="dropdown">
-                              <li><a href="blog.html">Blog - right Sidebar</a>
-                              </li>
-                              <li><a href="blog-left-sidebar.html">Blog - Left Sidebar</a>
-                              </li>
-                              <li><a href="single-post.html">Blog Single Post</a>
-                              </li>
-                            </ul>
-                          </li>
-                          <li>
-                            <a class="active" href="contact.html">Контакти</a>
-                          </li>
-                        </ul>
-                         Mobile Menu End 
-                
-                      </div>-->
-                <!-- End Header ( Logo & Naviagtion ) -->
-
+              
             </header>
             <!-- End Header -->
-
-
-
+            
+            <?php if(Yii::$app->controller->action->id != 'contact')
+            {
+                $homeUrl = Yii::$app->homeUrl;
+                $pageDetails = $this->params['pageDetails'];
+echo <<<HERE
+            <!-- Start Page Banner -->
+            <div class="page-banner" style="padding:40px 0; background: url($web/images/slide-02-bg.jpg) center #f9f9f9;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2>$this->title</h2>
+                            <p>
+                                $pageDetails
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="breadcrumbs">
+                                <li><a href="$homeUrl">Головна</a></li>
+                                <li>$this->title</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Page Banner -->
+HERE;
+            }
+            ?>
+            
+            <?= Alert::widget() ?>
+                        
             <?= $content ?>
-
-
-
 
             <!-- Start Footer -->
             <footer>
@@ -474,14 +362,10 @@ $menu_items = ['Головна', 'Про адвоката', 'Консульта�
                     <div class="copyright-section">
                         <div class="row">
                             <div class="col-md-6">
-                                <p>&copy; 2014 Margo - All Rights Reserved</p>
+                                <p>&copy; <?= date('Y') ?> Сайт адвоката Федорчук О.А. - всі права застережено</p>
                             </div>
-                            <div class="col-md-6">
-                                <ul class="footer-nav">
-                                    <li><a href="#">Sitemap</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                    <li><a href="#">Contact</a></li>
-                                </ul>
+                            <div class="col-md-6 text-right">
+                                <p>Розробник сайту <a href="mailto:fihor@mail.ua">Федорчук І.А.</a></p>
                             </div>
                         </div>
                     </div>
@@ -495,14 +379,9 @@ $menu_items = ['Головна', 'Про адвоката', 'Консульта�
         <!-- End Container -->
 
         <!-- Go To Top Link -->
-        <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
-
-
-<!--  <script type="text/javascript" src="js/script.js"></script>-->
+        <a href="#" class="back-to-top"><i class="glyphicon glyphicon-chevron-up"></i></a>
 
         <script type="text/javascript">
-            //Contact Form
-
             $('#submit').click(function () {
 
                 $.post("php/send.php", $(".contact-form").serialize(), function (response) {
@@ -513,12 +392,7 @@ $menu_items = ['Головна', 'Про адвоката', 'Консульта�
             });
         </script>
 
-
-
-
-
         <?php $this->endBody() ?>
     </body>
 </html>
 <?php $this->endPage() ?>
-

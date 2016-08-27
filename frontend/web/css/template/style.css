@@ -602,12 +602,12 @@ ul.social-list li:last-child a i {
 }
 
 .navbar-default .navbar-nav > li > a {
-	color: #999;
-	display: block;
+    color: #999;
+    display: block;
     font-size: 14px;
-	font-weight: 300;
-    padding: 28px 15px 28px 15px;
-	overflow: hidden;
+    font-weight: 300;
+    padding: 28px 7px;
+    overflow: hidden;
     transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
@@ -1106,17 +1106,17 @@ input[type="submit"] {
     color: #666fb5;
     font-size: 13px;
     font-family: 'Open Sans', sans-serif;
-    border: 1px solid #eee;
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -o-border-radius: 2px;
+    border: 1px solid #dee3f7;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -o-border-radius: 0px;
     outline: none;
     width: 100%;
     padding: 7px 14px;
     display: block;
     margin-bottom: 10px;  
-	transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
@@ -1127,11 +1127,11 @@ input[type="submit"] {
 #contact-form textarea:focus,
 #respond input[type="text"]:focus,
 #respond textarea:focus {
-	border-color: #ddd;
-	box-shadow: 0 0 3px #eee;
-	-o-box-shadow: 0 0 3px #eee;
-	-moz-box-shadow: 0 0 3px #eee;
-  	-webkit-box-shadow: 0 0 3px #eee;
+    border-color: #93aaff;
+    box-shadow: 0 0 3px #eee;
+    -o-box-shadow: 0 0 3px #eee;
+    -moz-box-shadow: 0 0 3px #eee;
+    -webkit-box-shadow: 0 0 3px #eee;
 }
 
 .mail_response {
@@ -4308,7 +4308,7 @@ footer a:hover {
 	text-transform: uppercase;
 }
 
-ul.footer-nav {
+/*ul.footer-nav {
     float: right;
 }
 
@@ -4334,12 +4334,12 @@ ul.footer-nav li a {
 
 ul.footer-nav li a:hover {
 	color: #fff;
-}
+}*/
 
 .back-to-top {
     display: none;
     position: fixed;
-    bottom: 18px;
+    bottom: 48px; /*18px;*/
     right: 15px;
 }
 
@@ -4350,7 +4350,7 @@ ul.footer-nav li a:hover {
     line-height: 36px;
     color: #fff;
     border-radius: 2px;
-	-webkit-border-radius: 2px;
+    -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     -o-border-radius: 2px;
     text-align: center;

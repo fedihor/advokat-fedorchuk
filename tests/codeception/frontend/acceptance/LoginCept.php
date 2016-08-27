@@ -15,14 +15,14 @@ $loginPage = LoginPage::openBy($I);
 $I->amGoingTo('submit login form with no data');
 $loginPage->login('', '');
 $I->expectTo('see validations errors');
-$I->see('Username cannot be blank.', '.help-block');
-$I->see('Password cannot be blank.', '.help-block');
+$I->see("Необхідно вказати ім'я користувача.", '.help-block');
+$I->see('Необхідно вказати адресу електронної пошти.', '.help-block');
 
 $I->amGoingTo('try to login with wrong credentials');
 $I->expectTo('see validations errors');
 $loginPage->login('admin', 'wrong');
 $I->expectTo('see validations errors');
-$I->see('Incorrect username or password.', '.help-block');
+$I->see("Ім'я користувача або пароль вказано некоректно.", '.help-block');
 
 $I->amGoingTo('try to login with correct credentials');
 $loginPage->login('erau', 'password_0');
