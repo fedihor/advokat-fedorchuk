@@ -1,5 +1,4 @@
 <?php
-
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model \frontend\models\PasswordResetRequestForm */
@@ -7,25 +6,36 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
-$this->title = 'Request password reset';
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = 'Відновлення пароля';
+Yii::$app->view->params['pageDetails'] = '';
 ?>
-<div class="site-request-password-reset">
-    <h1><?= Html::encode($this->title) ?></h1>
+<!-- Start Content -->
+<div id="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Classic Heading -->
+                <h4 class="classic-title"><span>Відновлення пароля</span></h4>
 
-    <p>Please fill out your email. A link to reset password will be sent there.</p>
+                <p style="padding: 15px 0;">
+                    Для відновлення пароля надішліть, 
+                    будь ласка, адресу електронної пошти, з якою ви зареєстровані на данному сайті.
+                    Після чтого, на вказану адресу буде відправлено посилання для відновлення пароля.
+                </p>
 
-    <div class="row">
-        <div class="col-lg-5">
-            <?php $form = ActiveForm::begin(['id' => 'request-password-reset-form']); ?>
+                <?php $form = ActiveForm::begin(['id' => 'request-password-reset-form']); ?>
 
-                <?= $form->field($model, 'email')->textInput(['autofocus' => true]) ?>
+                <?= $form->field($model, 'email')->textInput(['autofocus' => true])->label('Електронна пошта') ?>
 
                 <div class="form-group">
-                    <?= Html::submitButton('Send', ['class' => 'btn btn-primary']) ?>
+                    <?= Html::submitButton('Надіслати', ['class' => 'btn-system btn-large']) ?>
                 </div>
 
-            <?php ActiveForm::end(); ?>
+                <?php ActiveForm::end(); ?>
+                <!-- Divider -->
+                <div class="hr1" style="margin-bottom:30px;"></div>
+            </div>
         </div>
     </div>
 </div>
+<!-- End content -->

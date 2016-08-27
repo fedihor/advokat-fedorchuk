@@ -173,19 +173,26 @@ $menu_items = array(
             <?php if(Yii::$app->controller->action->id != 'contact')
             {
                 $homeUrl = Yii::$app->homeUrl;
-                $pageDetails = $this->params['pageDetails'];
+                if($this->params['pageDetails'] != '')
+                {
+                    $pageDetails = '<p>'.$this->params['pageDetails'].'</p>';
+                    $pageBannerClass = 'page-banner';
+                }
+                else
+                {
+                    $pageDetails = '';
+                    $pageBannerClass = 'page-banner no-subtitle';
+                }
 echo <<<HERE
             <!-- Start Page Banner -->
-            <div class="page-banner" style="padding:40px 0; background: url($web/images/slide-02-bg.jpg) center #f9f9f9;">
+            <div class="$pageBannerClass" style="padding:40px 0; background: url($web/images/slide-02-bg.jpg) center #f9f9f9;">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-9">
                             <h2>$this->title</h2>
-                            <p>
                                 $pageDetails
-                            </p>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <ul class="breadcrumbs">
                                 <li><a href="$homeUrl">Головна</a></li>
                                 <li>$this->title</li>
@@ -206,9 +213,9 @@ HERE;
             <!-- Start Footer -->
             <footer>
                 <div class="container">
-                    <div class="row footer-widgets">
+<!--                    <div class="row footer-widgets">
 
-                        <!-- Start Subscribe & Social Links Widget -->
+                         Start Subscribe & Social Links Widget 
                         <div class="col-md-3">
                             <div class="footer-widget mail-subscribe-widget">
                                 <h4>Get in touch<span class="head-line"></span></h4>
@@ -254,11 +261,11 @@ HERE;
                                 </ul>
                             </div>
                         </div>
-                        <!-- .col-md-3 -->
-                        <!-- End Subscribe & Social Links Widget -->
+                         .col-md-3 
+                         End Subscribe & Social Links Widget 
 
 
-                        <!-- Start Twitter Widget -->
+                         Start Twitter Widget 
                         <div class="col-md-3">
                             <div class="footer-widget twitter-widget">
                                 <h4>Twitter Feed<span class="head-line"></span></h4>
@@ -278,11 +285,11 @@ HERE;
                                 </ul>
                             </div>
                         </div>
-                        <!-- .col-md-3 -->
-                        <!-- End Twitter Widget -->
+                         .col-md-3 
+                         End Twitter Widget 
 
 
-                        <!-- Start Flickr Widget -->
+                         Start Flickr Widget 
                         <div class="col-md-3">
                             <div class="footer-widget flickr-widget">
                                 <h4>Flicker Feed<span class="head-line"></span></h4>
@@ -335,11 +342,11 @@ HERE;
                                 </ul>
                             </div>
                         </div>
-                        <!-- .col-md-3 --> 
-                        <!-- End Flickr Widget -->
+                         .col-md-3  
+                         End Flickr Widget 
 
 
-                        <!-- Start Contact Widget -->
+                         Start Contact Widget 
                         <div class="col-md-3">
                             <div class="footer-widget contact-widget">
                                 <h4><img src="<?= $web ?>/images/footer-margo.png" class="img-responsive" alt="Footer Logo" /></h4>
@@ -351,11 +358,11 @@ HERE;
                                 </ul>
                             </div>
                         </div>
-                        <!-- .col-md-3 -->
-                        <!-- End Contact Widget -->
+                         .col-md-3 
+                         End Contact Widget 
 
 
-                    </div>
+                    </div>-->
                     <!-- .row -->
 
                     <!-- Start Copyright -->

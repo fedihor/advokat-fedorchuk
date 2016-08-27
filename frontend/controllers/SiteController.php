@@ -135,13 +135,6 @@ class SiteController extends Controller
             ]);
         }
     }
-    
-    public function actionContact_()
-    {
-        //$this->layout = 'main-old';
-        
-        return $this->render('contact_');
-    }
 
     /**
      * Displays about page.

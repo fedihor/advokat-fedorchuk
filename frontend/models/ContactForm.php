@@ -28,10 +28,9 @@ class ContactForm extends Model
             [['email'], 'required', 'message' => "Необхідно вказати адресу електронної пошти"],
             [['subject'], 'required', 'message' => "Необхідно вказати тему листа"],
             [['body'], 'required', 'message' => "Необхідно написати текст листа"],
-            [['email'], 'required', 'message' => "Необхідно вказати адресу електронної пошти"],
             
             // email has to be a valid email address
-            ['email', 'email'],
+            ['email', 'email', 'message' => "Вказано некоректну адресу електронної пошти"],
             // verifyCode needs to be entered correctly
             //['verifyCode', 'captcha'],
         ];

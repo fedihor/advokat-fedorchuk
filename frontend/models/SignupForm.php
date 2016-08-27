@@ -21,18 +21,19 @@ class SignupForm extends Model
     {
         return [
             ['username', 'trim'],
-            ['username', 'required'],
-            ['username', 'unique', 'targetClass' => '\common\models\User', 'message' => 'This username has already been taken.'],
-            ['username', 'string', 'min' => 2, 'max' => 255],
+            ['username', 'required', 'message' => "Необхідно вказати ім'я."],
+            ['username', 'unique', 'targetClass' => '\common\models\User', 'message' => "Дане ім'я вже використовується."],
+            ['username', 'string', 'min' => 2, 'max' => 64, 'tooShort' => "Ім'я повинно містити щонайменше 2-ва символи."
+                , 'tooLong' => "Ім'я повинно містити щонайбільше 64-ри символи."],
 
             ['email', 'trim'],
-            ['email', 'required'],
-            ['email', 'email'],
-            ['email', 'string', 'max' => 255],
-            ['email', 'unique', 'targetClass' => '\common\models\User', 'message' => 'This email address has already been taken.'],
+            ['email', 'required', 'message' => "Необхідно вказати адресу електронної пошти."],
+            ['email', 'email', 'message' => "Введено некоректну адресу електронної пошти."],
+            ['email', 'string', 'max' => 255, 'message' => "Довжина адреси електронної пошти не повина перевищувати 255 символів."],
+            ['email', 'unique', 'targetClass' => '\common\models\User', 'message' => 'Дана адреса електронної пошти вже використовується.'],
 
-            ['password', 'required'],
-            ['password', 'string', 'min' => 6],
+            ['password', 'required', 'message' => "Необхідно вказати пароль."],
+            ['password', 'string', 'min' => 6, 'tooShort' => 'Довжина паролю не повина бути меньшою ніж 6-ть символів.'],
         ];
     }
 
