@@ -24,7 +24,12 @@ class ContactForm extends Model
     {
         return [
             // name, email, subject and body are required
-            [['name', 'email', 'subject', 'body'], 'required'],
+            [['name'], 'required', 'message' => "Необхідно вказати ім'я користувача"],
+            [['email'], 'required', 'message' => "Необхідно вказати адресу електронної пошти"],
+            [['subject'], 'required', 'message' => "Необхідно вказати тему листа"],
+            [['body'], 'required', 'message' => "Необхідно написати текст листа"],
+            [['email'], 'required', 'message' => "Необхідно вказати адресу електронної пошти"],
+            
             // email has to be a valid email address
             ['email', 'email'],
             // verifyCode needs to be entered correctly

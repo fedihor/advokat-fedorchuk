@@ -194,13 +194,13 @@ echo <<<HERE
                     </div>
                 </div>
             </div>
+            <br>
             <!-- End Page Banner -->
 HERE;
+                Alert::widget();
             }
             ?>
-            
-            <?= Alert::widget() ?>
-                        
+                       
             <?= $content ?>
 
             <!-- Start Footer -->

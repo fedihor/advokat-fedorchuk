@@ -5,6 +5,7 @@
 
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
+use common\widgets\Alert;
 
 //use yii\captcha\Captcha;
 
@@ -14,20 +15,19 @@ Yii::$app->view->params['pageDetails'] = 'Контакти';
 <div>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1296.9969291959678!2d32.053671911117526!3d49.446833088296906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d14c839b874bcb%3A0xca2c8f3761247622!2z0LHRg9C70YzQstCw0YAg0KjQtdCy0YfQtdC90LrQsCwgMTk0LCDQp9C10YDQutCw0YHQuCwg0KfQtdGA0LrQsNGB0YzQutCwINC-0LHQu9Cw0YHRgtGM!5e0!3m2!1suk!2sua!4v1471814176939" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
-
+<a name="mform"></a>
 <!-- Start Content -->
 <div id="content">
-    
+    <a name="mform"></a>
     <div class="container">
-
         <div class="row">
-
             <div class="col-md-8">
-
                 <!-- Classic Heading -->
                 <h4 class="classic-title"><span>Надіслати листа</span></h4>
                 
-                <?php $form = ActiveForm::begin(['id' => 'contact-form', 'options' => ['class' => 'contact-form']]); ?>
+                <?= Alert::widget(); ?>
+                
+                <?php $form = ActiveForm::begin(['action' => ['site/contact#mform'], 'id' => 'contact-form', 'options' => ['class' => 'contact-form']]); ?>
                
                     <?= $form->field($model, 'name')->textInput(['autofocus' => true])->label("Ім'я") ?>
 
@@ -49,9 +49,7 @@ Yii::$app->view->params['pageDetails'] = 'Контакти';
                 
                 <!-- Divider -->
                 <div class="hr1" style="margin-bottom:30px;"></div>
-                
             </div>
-
             <div class="col-md-4">
 
                 <!-- Classic Heading -->
@@ -84,16 +82,9 @@ Yii::$app->view->params['pageDetails'] = 'Контакти';
                     <li><strong>Понеділок - п'ятниця</strong> - з 12 до 14</li>
                     <li><strong>Субота, неділя</strong> - вихідний</li>
                 </ul>
-
             </div>
-            
-
- 
-
         </div>
-
     </div>
-
 </div>
 <!-- End content -->
 
