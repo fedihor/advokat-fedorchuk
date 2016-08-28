@@ -1,5 +1,4 @@
 <?php
-
 /* @var $this yii\web\View */
 /* @var $name string */
 /* @var $message string */
@@ -9,19 +8,29 @@ use yii\helpers\Html;
 
 $this->title = $name;
 ?>
-<div class="site-error">
+<!-- Start Content -->
+<div id="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Classic Heading -->
+                <h4 class="classic-title"><span><?= Html::encode($this->title) ?></span></h4>
 
-    <h1><?= Html::encode($this->title) ?></h1>
+                <div class="site-error">
 
-    <div class="alert alert-danger">
-        <?= nl2br(Html::encode($message)) ?>
+                    <div class="alert alert-danger">
+                        <?= nl2br(Html::encode($message)) ?>
+                    </div>
+
+                    <p>
+                        Данна помилка виникла коли веб-сервер виконував ваш запит.
+                    </p>
+                    <p>
+                        Зверніться до нас, якщо ви вважаете, що це помилка сервера.
+                    </p>
+
+                </div>
+            </div>
+        </div>
     </div>
-
-    <p>
-        The above error occurred while the Web server was processing your request.
-    </p>
-    <p>
-        Please contact us if you think this is a server error. Thank you.
-    </p>
-
 </div>

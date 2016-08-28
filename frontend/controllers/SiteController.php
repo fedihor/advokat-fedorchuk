@@ -147,7 +147,6 @@ class SiteController extends Controller
     }
     public function actionAbout()
     {
-        $this->layout = 'main-old';
         return $this->render('about');
     }
 
@@ -211,7 +210,7 @@ class SiteController extends Controller
         }
 
         if ($model->load(Yii::$app->request->post()) && $model->validate() && $model->resetPassword()) {
-            Yii::$app->session->setFlash('success', 'New password was saved.');
+            Yii::$app->session->setFlash('success', 'Новий пароль збережено.');
 
             return $this->goHome();
         }

@@ -49,6 +49,7 @@ Yii::$app->view->params['pageDetails'] = 'Контакти';
                 
                 <!-- Divider -->
                 <div class="hr1" style="margin-bottom:30px;"></div>
+                
             </div>
             <div class="col-md-4">
 
@@ -57,7 +58,7 @@ Yii::$app->view->params['pageDetails'] = 'Контакти';
 
                 <!-- Some Info -->
                 <p>
-                    Моя адреса проста. Дівчино вишли листа.<br>
+                    Дівчино вишли листа. Моя адреса проста.<br>
                     На Україні, просто хлопчині, Дівчино вишли листа.
                 </p>
 

@@ -15,7 +15,7 @@ Yii::$app->view->params['pageDetails'] = '';
         <div class="row">
             <div class="col-md-6">
                 <!-- Classic Heading -->
-                <h4 class="classic-title"><span>Відновлення пароля</span></h4>
+                <h4 class="classic-title"><span><?= Html::encode($this->title) ?></span></h4>
 
                 <p style="padding: 15px 0;">
                     Для відновлення пароля надішліть, 

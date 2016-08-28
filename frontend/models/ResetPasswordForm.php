@@ -28,11 +28,11 @@ class ResetPasswordForm extends Model
     public function __construct($token, $config = [])
     {
         if (empty($token) || !is_string($token)) {
-            throw new InvalidParamException('Password reset token cannot be blank.');
+            throw new InvalidParamException('Маркер скидання пароля повинен бути заповненим. Password reset token cannot be blank.');
         }
         $this->_user = User::findByPasswordResetToken($token);
         if (!$this->_user) {
-            throw new InvalidParamException('Wrong password reset token.');
+            throw new InvalidParamException('Некоректний маркер скидання пароля. Wrong password reset token.');
         }
         parent::__construct($config);
     }
@@ -43,8 +43,8 @@ class ResetPasswordForm extends Model
     public function rules()
     {
         return [
-            ['password', 'required'],
-            ['password', 'string', 'min' => 6],
+            ['password', 'required', 'message' => "Необхідно вказати новий пароль"],
+            ['password', 'string', 'min' => 6, 'tooShort' => 'Довжина паролю не повина бути меньшою ніж 6-ть символів.'],
         ];
     }
 
