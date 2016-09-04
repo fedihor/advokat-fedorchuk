@@ -39,6 +39,7 @@ class AppAsset extends AssetBundle
         'js/jquery.parallax.js',
         'js/jquery.slicknav.js', 
         'js/script.js',
+        'js/ownscript.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
