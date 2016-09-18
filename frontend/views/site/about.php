@@ -35,6 +35,9 @@ $web = yii\helpers\Url::to('@web');
                         свого резюме та повну, структуровану інформацію про мою професійну діяльність,
                         зате, я вже домовилась про рекламу цього сайту в Інтернеті!
                     </h3>
+                    
+                    <!-- Divider -->
+                    <div class="hr1" style="margin-bottom:30px;"></div>
                 </div>
 
                 <div class="col-md-5">
@@ -54,78 +57,69 @@ $web = yii\helpers\Url::to('@web');
             <!-- Divider -->
             <div class="hr1" style="margin-bottom:50px;"></div>
 
-            <div class="row">
+            <div id="full-screen-box" class="full-screen-box" onclick="document.querySelector('#full-screen-box').style.display = 'none'">
+                <div id="full-picture-box" class="full-picture-box"></div>
+            </div>
 
-                <div class="col-md-12">
+            <!-- Start Recent Projects Carousel -->
+            <div class="recent-projects">
+                <h4 class="title"><span>Копії документів</span></h4>
+                <div class="projects-carousel touch-carousel">
 
-
-                    <!-- Classic Heading -->
-                    <h4 class="classic-title"><span>Копії документів</span></h4>
-
-                    <div class="post-head">
-                        <a class="" title="Свідотство про право на заняття адвокатською діяльністю" onclick="expandDoc('doc1')">
-                            <img id='doc1' class="small-doc" alt="Свідотство про право на заняття адвокатською діяльністю" src="<?= $web ?>/images/about/svidadvok.png">
-                        </a>
+                    <div class="portfolio-item item">
+                        <div class="portfolio-border">
+                            <div class="portfolio-thumb">
+                                <a class="lightbox-own" title="Свідотство адвоката" onclick='expandDoc("<?= $web ?>/images/about/certificate.jpg", "Свідотство адвоката")'>
+                                    <div class="thumb-overlay"><i class="glyphicon glyphicon-eye-open"></i></div>
+                                    <img alt="Свідотство адвоката" src="<?= $web ?>/images/about/certificate.jpg">
+                                </a>
+                            </div>
+                            <div class="portfolio-details">
+                                <a href="#" onclick='expandDoc("<?= $web ?>/images/about/certificate.jpg", "Свідотство адвоката")'>
+                                    <h4>Свідотство</h4>
+                                    <span>Про право на зайняття адвокатською діяльністю</span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
-
-                </div>
-
-            </div>
-
-            <!-- Divider -->
-            <div class="hr1" style="margin-bottom:50px;"></div>
-
-
-
-
-
-            <div id="full-screen-box" class="full-screen-box" onclick="">
-
-                <div id="full-picture-box" class="full-picture-box" onclick="document.querySelector('#full-screen-box').style.display = 'none'">
-
-                        <img alt="" src="<?= $web ?>/images/about/svidadvok.png">
-                        <br><br><br><br>
-
-                </div>
-
-            </div>
-
-
-
-
-            <!--            <div class="nivo-lightbox-overlay nivo-lightbox-theme-default nivo-lightbox-effect-fadeScale nivo-lightbox-open">
-                            <div class="nivo-lightbox-wrap">
-                                <div class="nivo-lightbox-content">
-                                    <div style="line-height: 293px; height: 293px;" class="nivo-lightbox-image">
-                                        <img src="/advokat-fedorchuk/frontend/web/images/about/svidadvok.png">
-                                    </div>
-                                </div>
-                                <div class="nivo-lightbox-title-wrap">
-                                    <span class="nivo-lightbox-title">This is an image titledddd</span>
-                                </div>
+                    <div class="portfolio-item item">
+                        <div class="portfolio-border">
+                            <div class="portfolio-thumb">
+                                <a class="lightbox-own" title="Свідотство про підвищення кваліфікації" onclick='expandDoc("<?= $web ?>/images/about/training_certificate.jpg", "Свідотство адвоката")'>
+                                    <div class="thumb-overlay"><i class="glyphicon glyphicon-eye-open"></i></div>
+                                    <img alt="" src="<?= $web ?>/images/about/training_certificate.jpg" />
+                                </a>
                             </div>
-                            <a href="#" class="nivo-lightbox-nav nivo-lightbox-prev">Previous</a>
-                            <a href="#" class="nivo-lightbox-nav nivo-lightbox-next">Next</a>
-                            <a href="#" class="nivo-lightbox-close" title="Close">Close</a>
-                        </div>-->
+                            <div class="portfolio-details">
+                                <a href="#" onclick='expandDoc("<?= $web ?>/images/about/training_certificate.jpg", "Свідотство про підвищення кваліфікації")'>
+                                    <h4>Свідотство</h4>
+                                    <span>Про підвищення кваліфікації</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                    <div class="portfolio-item item">
+                        <div class="portfolio-border">
+                            <div class="portfolio-thumb">
+                                <a class="lightbox-own" title="Диплом за успіхи в адвокатській діяльності" onclick='expandDoc("<?= $web ?>/images/about/diploma.jpg", "Диплом за успіхи в адвокатській діяльності")'>
+                                    <div class="thumb-overlay"><i class="glyphicon glyphicon-eye-open"></i></div>
+                                    <img alt="" src="<?= $web ?>/images/about/diploma.jpg" />
+                                </a>
+                            </div>
+                            <div class="portfolio-details">
+                                <a href="#" onclick='expandDoc("<?= $web ?>/images/about/diploma.jpg", "Диплом за успіхи в адвокатській діяльності")'>
+                                    <h4>Диплом</h4>
+                                    <span>За успіхи в адвокатській діяльності</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Recent Projects Carousel -->
+            
         </div>
     </div>
 </div>

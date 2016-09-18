@@ -170,7 +170,7 @@ $menu_items = array(
             </header>
             <!-- End Header -->
             
-            <?php if(Yii::$app->controller->action->id != 'contact')
+            <?php if(Yii::$app->controller->action->id != 'contact' && Yii::$app->controller->action->id != 'index')
             {
                 $homeUrl = Yii::$app->homeUrl;
                 if($this->params['pageDetails'] != '')

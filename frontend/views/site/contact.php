@@ -80,7 +80,7 @@ Yii::$app->view->params['pageDetails'] = 'Контакти';
 
                 <!-- Info - List -->
                 <ul class="list-unstyled">
-                    <li><strong>Понеділок - п'ятниця</strong> - з 12 до 14</li>
+                    <li><strong>Понеділок - п'ятниця</strong> - з 12:00 до 14:00</li>
                     <li><strong>Субота, неділя</strong> - вихідний</li>
                 </ul>
             </div>
