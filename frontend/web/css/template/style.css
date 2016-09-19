@@ -42,7 +42,7 @@
 /*------------------------------------------*/
 body {
     font-family: 'Open Sans', sans-serif;
-    font-size: 13px;
+    font-size: 15px;
     line-height: 21px;
     font-weight: 300;
     color: #000;
@@ -108,7 +108,7 @@ h3 {
 }
 
 h4 {
-    font-size: 16px;
+    font-size: 17px;
 	line-height: 22px;
 }
 
@@ -124,7 +124,7 @@ h6 {
 
 p {
     color: #000;
-    font-size: 13px;
+    font-size: 15px;
     font-family: 'Open Sans', sans-serif;
     line-height: 22px;
     margin: 0;
@@ -2998,8 +2998,9 @@ ul.icons-list li i {
 }
 
 .portfolio-item .portfolio-details {
-	position: relative;
-	padding: 9px 12px 6px 12px;
+    position: relative;
+    padding: 9px 12px 6px 12px;
+    font-size: 13px;
 }
 
 .portfolio-item .portfolio-details .like-link {
@@ -3932,7 +3933,7 @@ ul.post-meta li, ul.post-meta li a {
 }
 
 .sidebar a {
-	color: #666;
+    color: #1f0a0a;
 }
 
 .sidebar .widget {

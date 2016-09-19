@@ -32,6 +32,7 @@
 	.projects-carousel {
 		width: 950px!important;
 	}
+
 }
 
 @media (max-width: 991px) {
@@ -203,7 +204,10 @@
         font-size: 20px;
     }
     
-
+    .owl-buttons {
+        display: none;
+    }
+    
 }
 
 @media (max-width: 768px) {
@@ -405,6 +409,10 @@
         
     .logo {
         font-size: larger;
+    }
+    
+    .copyright-right-section {
+        text-align: right;
     }
 }
 

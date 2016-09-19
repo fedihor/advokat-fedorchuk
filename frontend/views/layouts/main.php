@@ -371,7 +371,7 @@ HERE;
                             <div class="col-md-6">
                                 <p>&copy; <?= date('Y') ?> Сайт адвоката Федорчук О.А. - всі права застережено</p>
                             </div>
-                            <div class="col-md-6 text-right">
+                            <div class="col-md-6 copyright-right-section">
                                 <p>Розробник сайту <a href="mailto:fihor@mail.ua">Федорчук І.А.</a></p>
                             </div>
                         </div>

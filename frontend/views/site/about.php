@@ -43,7 +43,7 @@ $web = yii\helpers\Url::to('@web');
                 <div class="col-md-5">
 
                     <!-- Start Touch Slider -->
-                    <div class="touch-slider" data-slider-navigation="true" data-slider-pagination="true">
+                    <div class="touch-slider text-center" data-slider-navigation="true" data-slider-pagination="true">
                         <div class="item"><img alt="" src="<?= $web ?>/images/about/dolph1.jpg"></div>
                         <div class="item"><img alt="" src="<?= $web ?>/images/about/dolph2.jpg"></div>
                         <div class="item"><img alt="" src="<?= $web ?>/images/about/dolph3.jpg"></div>
@@ -78,10 +78,10 @@ $web = yii\helpers\Url::to('@web');
                                 <a href="#" onclick='expandDoc("<?= $web ?>/images/about/certificate.jpg", "Свідотство адвоката")'>
                                     <h4>Свідотство</h4>
                                     <span>
-                                        Про право на зайняття адвокатською діяльністю № 308.<br>
-                                        Дата видачі: 13.10.2008 р.<br>
+                                        Про право на зайняття адвокатською діяльністю № 308
+                                        від 13.10.2008 р.<br>
                                         Видано Черкаською обласною КДКА.<br>
-                                        Рішення про видачу Cвідоцтва: №&nbsp;57 від 13.10.2008 р.
+                                        Рішення про видачу Cвідоцтва №&nbsp;57 від 13.10.2008 р.
                                     </span>
                                 </a>
                             </div>
@@ -99,7 +99,7 @@ $web = yii\helpers\Url::to('@web');
                             <div class="portfolio-details">
                                 <a href="#" onclick='expandDoc("<?= $web ?>/images/about/training_certificate.jpg", "Свідотство про підвищення кваліфікації")'>
                                     <h4>Свідотство</h4>
-                                    <span>Про підвищення кваліфікації</span>
+                                    <span>Про підвищення кваліфікації адвокатом</span>
                                 </a>
                             </div>
                         </div>

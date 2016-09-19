@@ -31,7 +31,7 @@ $web = yii\helpers\Url::to('@web');
                         <h2 class="animated2">
                             <span><strong>Кабінет</strong> адвоката</span>
                         </h2>
-                        <h3 class="animated3"><span>Федорчук Оксани Адамівни</span></h3>
+                        <h3 class="animated3 white"><span>Федорчук Оксани Адамівни</span></h3>
                         <p class="animated4">
                             <?= Html::a('Про адвоката', ['/site/about'], $options = ['class' => 'slider btn btn-system btn-large']) ?>
                         </p>
@@ -253,34 +253,63 @@ $web = yii\helpers\Url::to('@web');
                             </div>
                             <div class="clearfix"></div>
                         </li>
-                        
+                        <li>
+                            <div class="widget-thumb">
+                                <a href="http://www.reyestr.court.gov.ua/" target="_blank">
+                                    <img src="<?= $web ?>/images/links/reyestr.png" alt="Єдиний державний реєстр судових рішень" />
+                                </a>
+                            </div>
+                            <div class="widget-content">
+                                <h5><a href="http://www.reyestr.court.gov.ua/" target="_blank">Єдиний державний реєстр судових рішень</a></h5>
+                            </div>
+                            <div class="clearfix"></div>
+                        </li>
+                        <li>
+                            <div class="widget-thumb">
+                                <a href="https://trade.informjust.ua/vpdoc/getdoc.aspx" target="_blank">
+                                    <img src="<?= $web ?>/images/links/informjust.jpg" alt="Єдиний державний реєстр виконавчих проваджень" />
+                                </a>
+                            </div>
+                            <div class="widget-content">
+                                <h5><a href="https://trade.informjust.ua/vpdoc/getdoc.aspx" target="_blank">Єдиний державний реєстр виконавчих проваджень</a></h5>
+                            </div>
+                            <div class="clearfix"></div>
+                        </li>
+                        <li>
+                            <div class="widget-thumb">
+                                <a href="http://www.ccu.gov.ua/" target="_blank">
+                                    <img src="<?= $web ?>/images/links/ccu.png" alt="Конституційний Суд України" />
+                                </a>
+                            </div>
+                            <div class="widget-content">
+                                <h5><a href="http://www.ccu.gov.ua/" target="_blank">Конституційний<br>Суд<br>України</a></h5>
+                            </div>
+                            <div class="clearfix"></div>
+                        </li>
+                        <li>
+                            <div class="widget-thumb">
+                                <a href="http://vkdka.org/" target="_blank">
+                                    <img src="<?= $web ?>/images/links/vkdka.png" alt="Вища кваліфікаційно-дисциплінарна комісія адвокатури" />
+                                </a>
+                            </div>
+                            <div class="widget-content">
+                                <h5><a href="http://vkdka.org/" target="_blank">Вища кваліфікаційно-дисциплінарна комісія адвокатури</a></h5>
+                            </div>
+                            <div class="clearfix"></div>
+                        </li>
+                        <li>
+                            <div class="widget-thumb">
+                                <a href="http://cay.org.ua/" target="_blank">
+                                    <img src="<?= $web ?>/images/links/cau.png" alt="Спілка адвокатів України" />
+                                </a>
+                            </div>
+                            <div class="widget-content">
+                                <h5><a href="http://cay.org.ua/" target="_blank">Спілка<br>адвокатів<br>України</a></h5>
+                            </div>
+                            <div class="clearfix"></div>
+                        </li>
+
                     </ul>
-                </div>
-
-                <!-- Video Widget -->
-                <div class="widget">
-                    <h4>Video <span class="head-line"></span></h4>
-                    <div>
-                        <iframe src="http://player.vimeo.com/video/63322694?byline=0&amp;portrait=0&amp;badge=0" width="800" height="450"></iframe>
-                    </div>
-                </div>
-
-                <!-- Tags Widget -->
-                <div class="widget widget-tags">
-                    <h4>Tags <span class="head-line"></span></h4>
-                    <div class="tagcloud">
-                        <a href="#">Portfolio</a>
-                        <a href="#">Theme</a>
-                        <a href="#">Mobile</a>
-                        <a href="#">Design</a>
-                        <a href="#">Wordpress</a>
-                        <a href="#">Jquery</a>
-                        <a href="#">CSS</a>
-                        <a href="#">Modern</a>
-                        <a href="#">Theme</a>
-                        <a href="#">Icons</a>
-                        <a href="#">Google</a>
-                    </div>
                 </div>
 
             </div>
