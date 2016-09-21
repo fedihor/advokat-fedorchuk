@@ -4364,6 +4364,10 @@ ul.footer-nav li a:hover {
     -moz-transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
+    
+    opacity: 0.7;
+    filter: alpha(Opacity=70); /* Прозрачность в IE */
+    border: none;
 }
 
 

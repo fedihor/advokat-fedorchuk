@@ -8,7 +8,7 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
 $this->title = 'Вхід';
-Yii::$app->view->params['pageDetails'] = '';
+Yii::$app->view->params['pageDetails'] = 'Сайт знаходиться на стадії розробки. Вхід на сайт обмежений.';
 ?>
 <!-- Start Content -->
 <div id="content">

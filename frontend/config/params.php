@@ -1,4 +1,8 @@
 <?php
 return [
-    'adminEmail' => 'fedihor@ukr.net',
+    'adminEmail' => 'advokat-fedorchuk@e-mail.ua', //'fedihor@ukr.net'
 ];
+
+// Оксанин логін/пароль:
+// oksana
+// 661171

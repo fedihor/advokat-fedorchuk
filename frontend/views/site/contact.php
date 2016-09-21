@@ -67,8 +67,8 @@ Yii::$app->view->params['pageDetails'] = 'Контакти';
 
                 <!-- Info - Icons List -->
                 <ul class="icons-list">
-                    <li><i class="head-icon glyphicon glyphicon-globe"></i> <strong>Адреса:</strong> бульвар Шевченка, буд. 194, м. Черкаси, Черкаська обл., 18000</li>
-                    <li><i class="head-icon glyphicon glyphicon-envelope"></i> <strong>Електронна пошта:</strong> <a href='mailto:advokat-fedorchuk@e-mail.ua'>advokat-fedorchuk@e-mail.ua</a></li>
+                    <li><i class="head-icon glyphicon glyphicon-globe"></i> <strong>Адреса:</strong> бульвар Шевченка, буд. 194, м.&nbsp;Черкаси, Черкаська обл., 18000</li>
+                    <li><i class="head-icon glyphicon glyphicon-envelope"></i> <strong>Ел. пошта:</strong> <a href='mailto:advokat-fedorchuk@e-mail.ua'>advokat-fedorchuk@e-mail.ua</a></li>
                     <li><i class="head-iconw glyphicon glyphicon-earphone"></i> <strong>Телефон:</strong> +38 063 464 54 54</li>
                 </ul>
 

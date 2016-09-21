@@ -8,16 +8,17 @@
     font-style: normal;
 }
 
-
-
 .logo-part1 {
     font-weight: bold;
     color: #ee3733;
 }
 
-
 .lang {
     margin: 0 3px;
+}
+
+.lang.active {
+    color: #ee3733;
 }
 
 .login-block {
@@ -66,16 +67,6 @@
     border-radius: 0;
 }
 
-/*#loginform-rememberme {
-    margin: 0 -23px;
-}
-
-.checkbox label {
-    padding-left: 22px;
-
-}*/
-
-
 .small-doc {
     width: 230px;
 }
@@ -123,5 +114,9 @@
 
 .left {
     text-align: left;
+}
+
+.portfolio-href:hover {
+    cursor: zoom-in;
 }
 

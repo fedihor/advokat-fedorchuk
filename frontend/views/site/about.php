@@ -44,7 +44,7 @@ $web = yii\helpers\Url::to('@web');
 
                     <!-- Start Touch Slider -->
                     <div class="touch-slider text-center" data-slider-navigation="true" data-slider-pagination="true">
-                        <div class="item"><img alt="" src="<?= $web ?>/images/about/dolph1.jpg"></div>
+                        <div class="item"><img alt="" src="<?= $web ?>/images/about/advoeatgrapes.jpg"></div>
                         <div class="item"><img alt="" src="<?= $web ?>/images/about/dolph2.jpg"></div>
                         <div class="item"><img alt="" src="<?= $web ?>/images/about/dolph3.jpg"></div>
                     </div>
@@ -75,7 +75,7 @@ $web = yii\helpers\Url::to('@web');
                                 </a>
                             </div>
                             <div class="portfolio-details">
-                                <a href="#" onclick='expandDoc("<?= $web ?>/images/about/certificate.jpg", "Свідотство адвоката")'>
+                                <a class="portfolio-href" onclick='expandDoc("<?= $web ?>/images/about/certificate.jpg", "Свідотство адвоката")'>
                                     <h4>Свідотство</h4>
                                     <span>
                                         Про право на зайняття адвокатською діяльністю № 308
@@ -97,7 +97,7 @@ $web = yii\helpers\Url::to('@web');
                                 </a>
                             </div>
                             <div class="portfolio-details">
-                                <a href="#" onclick='expandDoc("<?= $web ?>/images/about/training_certificate.jpg", "Свідотство про підвищення кваліфікації")'>
+                                <a class="portfolio-href" onclick='expandDoc("<?= $web ?>/images/about/training_certificate.jpg", "Свідотство про підвищення кваліфікації")'>
                                     <h4>Свідотство</h4>
                                     <span>Про підвищення кваліфікації адвокатом</span>
                                 </a>
@@ -114,7 +114,7 @@ $web = yii\helpers\Url::to('@web');
                                 </a>
                             </div>
                             <div class="portfolio-details">
-                                <a href="#" onclick='expandDoc("<?= $web ?>/images/about/diploma.jpg", "Диплом за успіхи в адвокатській діяльності")'>
+                                <a class="portfolio-href" onclick='expandDoc("<?= $web ?>/images/about/diploma.jpg", "Диплом за успіхи в адвокатській діяльності")'>
                                     <h4>Диплом</h4>
                                     <span>За успіхи в адвокатській діяльності</span>
                                 </a>
