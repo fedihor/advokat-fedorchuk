@@ -120,3 +120,88 @@
     cursor: zoom-in;
 }
 
+.pagination > .active > a {
+    border-color: #ee3733;
+    background-color: #ee3733;
+}
+
+.pagination > .active > a:hover {
+    background-color: #ee3733;
+    border-color: #ee3733;
+}
+
+.pagination > li > a {
+    color: #666666;
+    border: 1px solid #eee;
+}
+
+.pagination > li > a:hover {
+    color: #ee3733;
+    background-color: #fff;
+}
+
+.red-stripe-button {
+    position: relative;
+    display: inline-block;
+    overflow: visible;
+    margin: 0;
+    padding: 10px 14px;
+    margin-top: 8px;
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    background-color: #eee;
+    /*    background-image: -moz-linear-gradient(top,#eee,#eee);
+        background-image: -ms-linear-gradient(top,#eee,#eee);
+        background-image: -webkit-gradient(linear,0 0,0 100%,from(#eee),to(#eee));
+        background-image: -webkit-linear-gradient(top,#eee,#eee);
+        background-image: -o-linear-gradient(top,#eee,#eee);
+        background-image: linear-gradient(top,#eee,#eee);
+        background-repeat: repeat-x;*/
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee',endColorstr='#eeeeee',GradientType=0);
+    /*    -webkit-background-clip: padding;
+        -moz-background-clip: padding;
+        background-clip: padding;*/
+    zoom: 1;
+    z-index: 1;
+    display: inline;
+    font-family: "Segoe UI",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    color: #333;
+    min-width: 42px;
+    text-shadow: #fff 0 1px 0;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    vertical-align: inherit;
+    border-left: 3px solid #d84a38;
+    color: black;
+}
+
+a.red-stripe-button:hover {
+    background-color: #d9d9d9;
+    color: black;
+}
+
+
+a.red-stripe-button:active {
+    background-color: #ebe9e9;
+} 
+
+.post-preview-title:hover {
+    color: #ee3733;
+}
+
+
+
+
+
+
+.portfolio-background {
+    background-color: #f9fbfc;
+}
+
+.portfolio-background .portfolio-details a span {
+    color: #000;
+}

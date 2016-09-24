@@ -17,7 +17,7 @@ $menu_items = array(
     array('Головна', '/site/index'),
     array('Про адвоката', '/site/about'),
     array('Ціни', '/site/price'),
-    array('Консультація онлайн', '/site/consult'),
+    array('Консультація онлайн', '/consult/postlist'),
     array('Контакти', '/site/contact'),
 );
 ?>

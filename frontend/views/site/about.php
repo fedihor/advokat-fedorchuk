@@ -67,7 +67,7 @@ $web = yii\helpers\Url::to('@web');
                 <div class="projects-carousel touch-carousel">
 
                     <div class="portfolio-item item">
-                        <div class="portfolio-border">
+                        <div class="portfolio-border portfolio-background">
                             <div class="portfolio-thumb">
                                 <a class="lightbox-own" title="Свідотство адвоката" onclick='expandDoc("<?= $web ?>/images/about/certificate.jpg", "Свідотство адвоката")'>
                                     <div class="thumb-overlay"><i class="glyphicon glyphicon-eye-open"></i></div>
@@ -89,7 +89,7 @@ $web = yii\helpers\Url::to('@web');
                     </div>
 
                     <div class="portfolio-item item">
-                        <div class="portfolio-border">
+                        <div class="portfolio-border portfolio-background">
                             <div class="portfolio-thumb">
                                 <a class="lightbox-own" title="Свідотство про підвищення кваліфікації" onclick='expandDoc("<?= $web ?>/images/about/training_certificate.jpg", "Свідотство адвоката")'>
                                     <div class="thumb-overlay"><i class="glyphicon glyphicon-eye-open"></i></div>
@@ -106,7 +106,7 @@ $web = yii\helpers\Url::to('@web');
                     </div>
 
                     <div class="portfolio-item item">
-                        <div class="portfolio-border">
+                        <div class="portfolio-border portfolio-background">
                             <div class="portfolio-thumb">
                                 <a class="lightbox-own" title="Диплом за успіхи в адвокатській діяльності" onclick='expandDoc("<?= $web ?>/images/about/diploma.jpg", "Диплом за успіхи в адвокатській діяльності")'>
                                     <div class="thumb-overlay"><i class="glyphicon glyphicon-eye-open"></i></div>

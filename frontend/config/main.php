@@ -12,12 +12,14 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
+    //'defaultRoute' => 'site/about',
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
 
 
             //'baseUrl' => '/advokat-fedorchuk',
+            //'baseUrl' => '',
 
 
         ],
@@ -45,8 +47,10 @@ return [
         
         'urlManager' => [
             'enablePrettyUrl' => true,
-            //'showScriptName' => true,
+            //'showScriptName' => false,
             'rules' => [
+                //'price' => 'site/price',
+                //'<action>' => 'site/<action>',
             ],
         ],
         
