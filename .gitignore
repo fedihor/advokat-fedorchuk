@@ -34,3 +34,5 @@ phpunit.phar
 
 /frontend/web/images
 
+/.vscode
+/frontend/web/userdocs/

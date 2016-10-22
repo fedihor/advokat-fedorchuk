@@ -17,7 +17,7 @@ $menu_items = array(
     array('Головна', '/site/index'),
     array('Про адвоката', '/site/about'),
     array('Ціни', '/site/price'),
-    array('Консультація онлайн', '/consult/postlist'),
+    array('Консультація онлайн', '/consult/index'),
     array('Контакти', '/site/contact'),
 );
 ?>
@@ -33,7 +33,10 @@ $menu_items = array(
         <meta name="author" content="Федорчук І.А.">
 
         <script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
+        <script src="<?= $web.'/js/ownscript.js' ?>" type="text/javascript"></script>
 
+
+        
         <!--[if IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
         <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
@@ -139,8 +142,13 @@ $menu_items = array(
                     ['label' => $menu_items[0][0], 'url' => [$menu_items[0][1]]],
                     ['label' => $menu_items[1][0], 'url' => [$menu_items[1][1]]],
                     ['label' => $menu_items[2][0], 'url' => [$menu_items[2][1]]],
-                    ['label' => $menu_items[3][0], 'url' => [$menu_items[3][1]]],
+                    ['label' => $menu_items[3][0], 'url' => [$menu_items[3][1]], 'options' => ['id' => 'consult-menu-item']],
                     ['label' => $menu_items[4][0], 'url' => [$menu_items[4][1]]],
+                    
+                    /*['label' => 'Products', 'url' => ['product/index'], 'items' => [
+                        ['label' => 'New Arrivals', 'url' => ['product/index', 'tag' => 'new']],
+                        ['label' => 'Most Popular', 'url' => ['product/index', 'tag' => 'popular']],
+                    ]],*/
                 ];
                 ?>
                 <div class="navbar-collapse collapse">
@@ -158,7 +166,7 @@ $menu_items = array(
                     ['label' => $menu_items[0][0], 'url' => [$menu_items[0][1]]],
                     ['label' => $menu_items[1][0], 'url' => [$menu_items[1][1]]],
                     ['label' => $menu_items[2][0], 'url' => [$menu_items[2][1]]],
-                    ['label' => $menu_items[3][0], 'url' => [$menu_items[3][1]]],
+                    ['label' => $menu_items[3][0], 'url' => [$menu_items[3][1]], 'options' => ['id' => 'consult-mobile-menu-item']],
                     ['label' => $menu_items[4][0], 'url' => [$menu_items[4][1]]],
                 ];
                 echo Nav::widget([
@@ -186,18 +194,25 @@ $menu_items = array(
                     $pageDetails = '';
                     $pageBannerClass = 'page-banner no-subtitle';
                 }
+                if(!empty($this->params['crumb'])) {
+                    $crumb = $this->params['crumb'].'';
+                } else {
+                    $crumb = '';
+                }
+                
 echo <<<HERE
             <!-- Start Page Banner -->
             <div class="$pageBannerClass" style="padding:40px 0; background: url($web/images/slide-02-bg.jpg) center #f9f9f9;">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-9">
+                        <div class="col-md-6">
                             <h2>$this->title</h2>
                                 $pageDetails
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-6">
                             <ul class="breadcrumbs">
                                 <li><a href="$homeUrl">Головна</a></li>
+                                $crumb
                                 <li>$this->title</li>
                             </ul>
                         </div>
@@ -252,12 +267,8 @@ HERE;
 
             });            
         </script>
-        <script type="text/javascript">           
-            var height = document.documentElement.clientHeight - 
-                (document.getElementById('top-bar').clientHeight + 
-                document.getElementById('w0').clientHeight + 
-                document.getElementById('footer').clientHeight + 109 + 26);
-            document.getElementById('page-wrap').style.setProperty('min-height', height + 'px');
+        <script type="text/javascript">   
+            setMinHeightForPageWrap();
         </script>
         <?php $this->endBody() ?>
     </body>
