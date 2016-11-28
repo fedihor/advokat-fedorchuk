@@ -1,3 +1,4 @@
+drop table if exists askpostfile;
 drop table if exists askpost;
 
 create table askpost
@@ -11,8 +12,6 @@ create table askpost
     primary key (id),
     foreign key (user_id) references user (id) on delete restrict on update cascade
 ) engine = InnoDB character set = utf8 collate utf8_unicode_ci;
-
-drop table if exists askpostfile;
 
 create table askpostfile
 (
